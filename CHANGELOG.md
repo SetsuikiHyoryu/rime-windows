@@ -2,7 +2,9 @@
 
 ## [Unreleased]
 
-## Added
+## [0.1.0] - 2025-06-03
+
+## Added (0.1.0)
 
 - 创建 Rime 的 Windows 自定义设置。
 
