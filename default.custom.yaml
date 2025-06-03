@@ -1,0 +1,22 @@
+patch:
+  schema_list:
+    - { schema: wubi86 }
+    - { schema: wubi_pinyin }
+  translator:
+    enable_user_dict: false
+  menu:
+    page_size: 3
+  key_binder:
+    bindings:
+      - { accept: Return, send: Escape, when: composing }
+      - { accept: semicolon, send: 2, when: has_menu }
+      - { accept: apostrophe, send: 3, when: has_menu }
+      - { accept: bracketleft, send: Page_Up, when: paging }
+      - { accept: bracketright, send: Page_Down, when: has_menu }
+
+  # 不重码自动上屏的设置，但未生效。
+  # <https://github.com/rime/weasel/blob/7a52fce2e6f5a991c58f2a19c93e82d3cfa191d3/CHANGELOG.md?plain=1#L668>
+  speller:
+    max_code_length: 4
+    auto_select: true
+    auto_select_unique_candidate: true
