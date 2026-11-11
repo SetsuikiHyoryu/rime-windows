@@ -1,7 +1,8 @@
+# 小狼毫外观（patch 到 weasel.yaml）
 patch:
   style:
     font_face: 'Source Han Sans SC'
     text_orientation: vertical
-    inline_preedit: true
+    inline_preedit: true # 编码串内嵌到应用光标处
     inline_candidate: true
-    color_scheme: native
+    color_scheme: brisk # native 不在内置配色里；可选：brisk / metroblue / flypy / google / ink

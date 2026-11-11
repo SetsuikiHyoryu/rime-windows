@@ -1,0 +1,15 @@
+# 五笔86 方案级自定义（patch 到 wubi86.schema.yaml）
+# 注意：speller / translator 必须写在 schema 级，写在 default.custom.yaml 会被 schema 的同名节点覆盖
+patch:
+  # ---- 编码与上屏 ----
+  speller/max_code_length: 4
+  speller/auto_select: true # 唯一候选自动上屏（满4码不重码直接上屏）
+  speller/auto_select_unique_candidate: true
+
+  # ---- 固定候选顺序：关掉学习 ----
+  translator/enable_user_dict: false # 不读/写用户词典（候选不再按使用频率漂移）
+  translator/enable_encoder: false # 不再由已上屏内容自动造词
+
+  # 如果希望更"死"的候选（只出精确码候选，不要提示/补全、不要造句），去掉下面两行的注释：
+  translator/enable_completion: false
+  translator/enable_sentence: false
